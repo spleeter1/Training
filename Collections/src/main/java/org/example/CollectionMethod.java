@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class CollectionMethod {
     public static void main(String[] args) {
@@ -43,7 +40,28 @@ public class CollectionMethod {
         }
 
         Object[] arr = list.toArray();
+        list.remove(3);
         System.out.println(list);
+
         System.out.println(Arrays.toString(arr));
+
+        System.out.println("---------------");
+        Collections.sort(list);
+        System.out.println("List: "+ list);
+
+        int index = Collections.binarySearch(list, "Python");
+        System.out.println("Tìm kiếm 'Python': Vị trí = " + index);
+
+        Collections.reverse(list);
+        System.out.println("Đảo ngược danh sách: " + list);
+
+        Collections.shuffle(list);
+        System.out.println("Trộn ngẫu nhiên: " + list);
+
+        Collections.fill(list, "Học Java");
+        System.out.println("Gán giá trị cho toàn bộ: " + list);
+
+        Collections.copy(list2,list);
+        System.out.println("List2: "+list2);
     }
 }
